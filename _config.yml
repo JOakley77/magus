@@ -1,0 +1,18 @@
+# Dependencies
+markdown:           rdiscount
+pygments:           true
+
+# Permalinks
+permalink:          pretty
+
+# Server
+destination:        ./docs
+exclude:            [".gitignore", "composer.json", "Gruntfile.js", "package.json", "node_modules", "README.md", 'compass']
+port:               9001
+
+# Custom vars
+bs_repo:            https://github.com/twbs/bootstrap
+plugin_repo:        https://github.com/joakley77/magus
+
+download:           https://github.com/twbs/bootstrap/archive/3.0.0-wip.zip
+download_dist:      http://getbootstrap.com/bs-v3.0.0-rc1-dist.zip

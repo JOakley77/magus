@@ -1,0 +1,24 @@
+<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+    <div class="container">
+        <a href="{{ page.base_url }}" class="navbar-brand">Magus</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+        <div class="nav-collapse collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
+                    <a href="{{ page.base_url }}getting-started">Getting started</a>
+                </li>
+                <li{% if page.slug == "css" %} class="active"{% endif %}>
+                    <a href="{{ page.base_url }}css">Usage</a>
+                </li>
+                <li{% if page.slug == "components" %} class="active"{% endif %}>
+                    <a href="{{ page.base_url }}components">Options</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
