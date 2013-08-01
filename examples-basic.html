@@ -1,0 +1,246 @@
+---
+layout: default
+title: Basic Example
+slug: examples-basic
+lead: "A basic example of loading Magus with no parameters."
+base_url: "../"
+---
+
+<!-- Collapse
+================================================== -->
+<div class="bs-docs-section">
+    <h2 id="basic-examples">Basic Example</h2>
+    <p>Using a basic initializer, we get a step-by-step wizard to guide the user down a linear path:</p>
+
+    <div class="bs-example magus" id="magus_basic_example" data-default-panel="0">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="accordion">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel1">Panel #1</a>
+                        </div>
+                        <div id="panel1" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel2">Panel #2</a>
+                        </div>
+                        <div id="panel2" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="0">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="2">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel3">Panel #3</a>
+                        </div>
+                        <div id="panel3" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="1">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="3" disabled="disabled">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <ol class="magus-steps">
+                    <li><a href="#panel1">Panel #1</a></li>
+                    <li><a href="#panel2">Panel #2</a></li>
+                    <li><a href="#panel3">Panel #3</a></li>
+                </ol>
+
+                <hr />
+
+                <div class="panel">
+                    <div class="panel-heading">Triggers</div>
+
+                    <h4>Collapse / Hide</h4>
+                    <button type="button" class="btn btn-mini btn-default" data-hide="0">Panel 1</button>
+                    <button type="button" class="btn btn-mini btn-default" data-hide="current">Current</button>
+
+                    <h4>Expand / Show</h4>
+                    <button type="button" class="btn btn-mini btn-default" data-show="0">Panel 1</button>
+                    <button type="button" class="btn btn-mini btn-default" data-show="last">Last Active</button>
+
+                    <h4>Disable</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-mini btn-danger" data-disable="0">Panel 1</button>
+                        <button type="button" class="btn btn-mini btn-danger" data-disable="1">Panel 2</button>
+                        <button type="button" class="btn btn-mini btn-danger" data-disable="2">Panel 3</button>
+                    </div>
+
+                    <h4>Jump To</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-mini btn-default" data-goto="0">Panel 1</button>
+                        <button type="button" class="btn btn-mini btn-default" data-goto="1">Panel 2</button>
+                        <button type="button" class="btn btn-mini btn-default" data-goto="2">Panel 3</button>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading">Pagination</div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                        <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading">Alerts</div>
+                    <button type="button" class="btn btn-mini btn-warning" data-alert="0">Panel 1</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /example -->
+
+{% highlight html %}
+<div class="accordion" id="basic_example">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel1">Collapsible Group Item #1</a>
+        </div>
+        <div id="panel1" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel2">Collapsible Group Item #2</a>
+        </div>
+        <div id="panel2" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel3">Collapsible Group Item #3</a>
+        </div>
+        <div id="panel3" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
+{% endhighlight %}
+
+    <h2 id="basic-usage">Usage</h2>
+
+    <h3>Via data attributes</h3>
+    <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
+    <p>To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.</p>
+
+    <h3>Via JavaScript</h3>
+    <p>Enable manually with:</p>
+{% highlight js %}
+$(".collapse").collapse()
+{% endhighlight %}
+
+    <h3>Options</h3>
+    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 50px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>parent</td>
+           <td>selector</td>
+           <td>false</td>
+           <td>If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior)</td>
+         </tr>
+         <tr>
+           <td>toggle</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>Toggles the collapsible element on invocation</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
+
+    <h3>Methods</h3>
+
+    <h4>.collapse(options)</h4>
+    <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
+{% highlight js %}
+$('#myCollapsible').collapse({
+  toggle: false
+})
+{% endhighlight %}
+
+    <h4>.collapse('toggle')</h4>
+    <p>Toggles a collapsible element to shown or hidden.</p>
+
+    <h4>.collapse('show')</h4>
+    <p>Shows a collapsible element.</p>
+
+    <h4>.collapse('hide')</h4>
+    <p>Hides a collapsible element.</p>
+
+    <h3>Events</h3>
+    <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>show</td>
+           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+         </tr>
+         <tr>
+           <td>shown</td>
+           <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+         </tr>
+         <tr>
+           <td>hide</td>
+           <td>
+            This event is fired immediately when the <code>hide</code> method has been called.
+           </td>
+         </tr>
+         <tr>
+           <td>hidden</td>
+           <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
+{% highlight js %}
+$('#myCollapsible').on('hidden.bs.collapse', function () {
+  // do something…
+})
+{% endhighlight %}
+  </div>

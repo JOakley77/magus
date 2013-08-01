@@ -14,5 +14,5 @@ port:               9001
 bs_repo:            https://github.com/twbs/bootstrap
 plugin_repo:        https://github.com/joakley77/magus
 
-download:           https://github.com/twbs/bootstrap/archive/3.0.0-wip.zip
-download_dist:      http://getbootstrap.com/bs-v3.0.0-rc1-dist.zip
+download:           https://github.com/JOakley77/magus/archive/master.zip
+download_dist:      http://www.jasonthedev.com.com/downloads/magus.zip

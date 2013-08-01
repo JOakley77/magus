@@ -1,5 +1,7 @@
 $(function () {
-	test( "hello test", function() {
-	  ok( 1 == "1", "Passed!" );
+	test( "should provide no conflict", function () {
+		var magus = $.fn.magus.noConflict();
+		ok(!$.fn.magus, 'magus was set back to undefined (org value)');
+        $.fn.magus = magus;
 	});
 });

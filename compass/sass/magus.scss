@@ -1,3 +1,232 @@
+@import "compass/css3";
+
 .magus {
-	background: blue;
+	.accordion {
+		.accordion-group {
+			.accordion-heading {
+				.accordion-toggle {
+					position: relative;
+					text-decoration: none;
+					
+					> span {
+						position: absolute;
+						top: 50%;
+						right: 10px;
+						margin-top: -7px;
+					}
+				}
+			}
+			.accordion-body {
+				.accordion-inner {
+
+				}
+			}
+
+			&.magus-active {
+				.accordion-heading a {
+					background-color: #5cb85c;
+				}
+			}
+
+			&.magus-inactive {
+				.accordion-heading a {
+					background-color: #95D195;
+				}
+			}
+
+			&.magus-alert {
+				.accordion-heading a {
+					background-color: #f0ad4e;
+				}
+			}
+
+			&.magus-disabled {
+				.accordion-heading a {
+					background-color: #eee;
+				}
+			}
+		}
+	}
+
+	.magus-steps {
+		margin: 0;
+		padding: 0; 
+		counter-reset: li;
+		list-style: none;
+		font-size: 14px;
+		@include text-shadow( 0 1px 0 rgba( 255, 255, 255, 0.5 ) );
+		
+		li {
+			padding: 4px 0;
+			
+			a {
+				position: relative;
+				display: block;
+				margin: 0;
+				padding: 0 0 0 38px;
+				background: #fff;
+				color: #444;
+				font-size: 14px;
+				text-decoration: none;
+				@include transition( all 0.3s ease-in-out );
+				
+				i {
+					@include opacity( 0 );
+				}
+
+				&:before {
+					content: counter(li);
+					counter-increment: li;
+					position: absolute;	
+					left: 0;
+					top: 50%;
+					margin-top: -13px;
+					background: #333;
+					height: 25px;
+					width: 25px;
+					line-height: 25px;
+					color: #fff;
+					text-align: center;
+					font-weight: bold;
+					@include text-shadow( none );
+				}
+
+				&:after {
+					position: absolute;	
+					content: '';
+					border: 12px solid rgba( 255, 255, 255, 0 );
+					left: 0;
+					top: 50%;
+					margin-top: -12px;
+					@include transition( background 0.3s ease-in-out );
+				}
+				
+				&:hover {
+					&:after {
+						
+					}
+				}
+			}
+
+			&.acc-inactive {
+				a {
+					&:before {
+						background: #56C5FF;
+						color: #1183BE;
+					}
+				}
+			}
+
+			&.acc-completed {
+				a {
+					color: #567910;
+					@include text-shadow( 1px 1px 0 rgba( 255, 255, 255, 0.5 ) );
+					
+					i {
+						color: #7BAD18;
+						@include opacity( 1 );
+					}
+
+					&:before {
+						background: #7BAD18;
+						color: #517509;
+					}
+					&:after {
+						@include opacity( 0 );
+					}
+					&:hover {
+						&:before {
+							background: #7BAD18;
+						}
+					}
+				}
+
+				&.acc-active {
+					a {
+						&:before {
+							background: #358000;
+							color: #fff;
+						}
+						&:after {
+							border-left-color: #358000;
+						}
+						&:hover {
+							&:before {
+								background: #358000;
+							}
+						}
+					}
+				}
+			}
+
+			&.magus-inactive a {
+				&:before {
+					background: #95D195;
+				}
+			}
+
+			&.magus-active {
+				a {
+					padding-left: 40px;
+
+					&:before {
+						background: #5cb85c;
+					}
+
+					&:after {
+						left: 25px;
+						border-left-color: #5cb85c;
+					}
+
+					&:hover {
+						&:before {
+							background: #5cb85c;
+						}
+					}
+				}
+			}
+
+			&.magus-alert a {
+				&:before {
+					background: #f0ad4e;
+				}
+				&:after {
+					left: 25px;
+					border-left-color: #f0ad4e;
+				}
+
+				&:hover {
+					&:before {
+						background: #f0ad4e;
+					}
+				}
+			}
+
+			&.magus-disabled a {
+				&:before {
+					background: #eee;
+					color: #ccc;
+				}
+			}
+		}
+	}
+
+	.magus-inactive a,
+	.magus-active a {
+		cursor: default;
+		color: #fff;
+	}
+
+	.magus-inactive a {
+		font-weight: normal;
+	}
+
+	.magus-active a {
+		font-weight: bold;
+	}
+
+	.magus-disabled a {
+		color: #ccc;
+		cursor: not-allowed;
+	}
 }

@@ -1,0 +1,169 @@
+---
+layout: default
+title: Getting started
+slug: getting-started
+lead: "An overview of Magus, how to download and use, basic templates and examples."
+base_url: "../"
+---
+
+<!-- Getting started
+================================================== -->
+<div class="bs-docs-section">
+    <div class="page-header">
+        <h1 id="get-dependencies">Get Dependencies</h1>
+    </div>
+    <p class="lead">The dependency list is small and kind of obvious. Bootstrap &amp; jQuery is all you need to get started.</p>
+
+    <hr>
+
+    <h3 id="get-bootstrap">Bootstrap</h3>
+    <div class="bs-docs-dl-options">
+        <h4>
+            <a href="https://github.com/twbs/bootstrap/archive/3.0.0-wip.zip">Download latest source code</a>
+        </h4>
+        <p>Get the original files for all CSS and JavaScript by downloading the latest version directly from GitHub.</p>
+        
+        <h4>
+            <a href="https://github.com/twbs/bootstrap">Clone or fork via GitHub</a>
+        </h4>
+        <p>Clone the entire project or fork your own version of Bootstrap to make it your own by visiting us on GitHub.</p>
+        
+        <h4>Install with <a href="http://bower.io">Bower</a></h4>
+        <p>Install and manage the original files for all CSS and JavaScript, along with a local copy of the docs, using <a href="http://bower.io">Bower</a>.</p>
+        {% highlight bash %}$ bower install bootstrap{% endhighlight %}
+    </div>
+
+    <hr />
+
+    <h3 id="get-jquery">jQuery</h3>
+    <div class="bs-docs-dl-options">
+        <h4>
+            <a href="http://code.jquery.com/jquery-1.10.2.min.js">Download latest source code</a>
+        </h4>
+        <p>Download jQuery or link to their CDN.</p>
+    </div>
+</div>
+
+<!-- Getting started
+================================================== -->
+<div class="bs-docs-section">
+    <div class="page-header">
+        <h1 id="download">Download Magus</h1>
+    </div>
+    <p class="lead">There are a few easy ways to quickly get started with Magus. Read through to see what suits your particular needs.</p>
+
+    <h3>Download compiled CSS and JS</h3>
+    <p class="lead">The fastest way to get started is to get the compiled and minified versions of our Plugin. No documentation or original source files are included.</p>
+    <p><a class="btn btn-large btn-primary" href="{{ site.download_dist }}">Download Magus</a></p>
+
+    <hr>
+
+    <h3 id="download-options">More download options</h3>
+    <div class="bs-docs-dl-options">
+        <h4>
+            <a href="{{ site.download }}">Download latest source code</a>
+        </h4>
+        <p>Get the original files for all CSS and JavaScript by downloading the latest version directly from GitHub.</p>
+        
+        <h4>
+            <a href="{{ site.plugin_repo }}">Clone or fork via GitHub</a>
+        </h4>
+        <p>Clone the entire project or fork your own version of Magus to make it your own by visiting us on GitHub.</p>
+        
+        <h4>Install with <a href="http://bower.io">Bower</a></h4>
+        <p>Install and manage the original files for all CSS and JavaScript, along with a local copy of the docs, using <a href="http://bower.io">Bower</a>.</p>
+        {% highlight bash %}$ bower install magus{% endhighlight %}
+    </div>
+</div>
+
+<hr>
+
+<!-- File structure
+================================================== -->
+<div class="bs-docs-section">
+    <div class="page-header">
+        <h1 id="whats-included">What's included</h1>
+    </div>
+    <p class="lead">Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.</p>
+    <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Plugin. You'll see something like this:</p>
+
+{% highlight bash %}
+magus/
+├── css/
+│   ├── magus.css
+│   ├── magus.min.css
+├── js/
+│   ├── magus.js
+│   ├── magus.min.js
+{% endhighlight %}
+
+    <p>This is the most basic form of Magus: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>magus.*</code>), as well as compiled and minified CSS and JS (<code>magus.min.*</code>).</p>
+</div>
+
+<!-- Template
+================================================== -->
+<div class="bs-docs-section">
+    <div class="page-header">
+        <h1 id="template">Basic usage</h1>
+    </div>
+    <p class="lead">In its simplest form, you can initialize Magus using the default options, or dive into a <a href="../examples.html">few examples</a> we've started for you.</p>
+
+    <p>Copy and paste the HTML from below to get started with a bare bones Magus document.</p>
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magus Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Dependencies -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <h1>Hello, world!</h1>
+
+        <!-- JavaScript plugins (requires jQuery) -->
+        <script src="http://code.jquery.com/jquery.js"></script>
+        
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        
+        <!-- Include the Magus Plugin -->
+        <script src="js/magus.min.js"></script>
+    </body>
+</html>
+{% endhighlight %}
+
+    <h3>Looking for more flexibility?</h3>
+    <p>Check out the <a href="../examples.html">Examples</a> or <a href="../options.html">Options</a>.</p>
+  </div>
+
+<!-- Browser compatibility
+================================================== -->
+<div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="browsers">Browser compatibility</h1>
+    </div>
+    <p class="lead">Bootstrap is built to work best in the latest desktop and mobile browsers. Magus should match functionality at the same level as Bootstrap.</p>
+
+    <h3>Supported browsers</h3>
+    <p>Specifically, we support the latest versions of the following:</p>
+    <ul>
+        <li>Chrome (Mac, Windows, iOS, and Android)</li>
+        <li>Safari (Mac and iOS only, as Windows has more or less been discontinued)</li>
+        <li>Firefox (Mac, Windows)</li>
+        <li>Internet Explorer</li>
+        <li>Opera (Mac, Windows)</li>
+    </ul>
+
+    <p>For more information on browser compatibility you should view the <a href="http://getbootstrap.com/getting-started/">Bootstrap Documentation</a>.</p>
+</div>
+
+<!-- License FAQs
+================================================== -->
+<div class="bs-docs-section">
+    <div class="page-header">
+        <h1 id="license-faqs">License FAQs</h1>
+    </div>
+    <p class="lead">Magus is released under the Apache 2 license.</p>
+    <p>The full Bootstrap license is located <a href="{{ site.plugin_repo }}/blob/master/README.md">in the project repository</a> for more information.</p>
+</div><!-- /.bs-docs-section -->

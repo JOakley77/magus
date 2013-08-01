@@ -12,11 +12,21 @@
                 <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
                     <a href="{{ page.base_url }}getting-started">Getting started</a>
                 </li>
-                <li{% if page.slug == "css" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}css">Usage</a>
+                <li{% if page.slug == "examples" %} class="active"{% endif %}>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="{{ page.base_url }}examples">Examples <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="../examples">Overview</a></li>
+                        <li><a href="../examples-basic">Basic</a></li>
+                        <li><a href="#">Steps on the side</a></li>
+                        <li><a href="#">Steps on the top</a></li>
+                        <li><a href="#">Form validation</a></li>
+                    </ul>
                 </li>
-                <li{% if page.slug == "components" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}components">Options</a>
+                <li{% if page.slug == "customizing" %} class="active"{% endif %}>
+                    <a href="{{ page.base_url }}customizing">Customizing</a>
+                </li>
+                <li{% if page.slug == "options" %} class="active"{% endif %}>
+                    <a href="{{ page.base_url }}options">Options</a>
                 </li>
             </ul>
         </div>

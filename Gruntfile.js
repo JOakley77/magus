@@ -35,6 +35,9 @@ module.exports = function(grunt) {
             gruntfile: {
                 src: 'Gruntfile.js'
             },
+            docs: {
+                src: ['assets/js/application.js']
+            },
             src: {
                 src: ['js/*.js']
             },
@@ -87,7 +90,11 @@ module.exports = function(grunt) {
         watch: {
             src: {
                 files: '<%= jshint.src.src %>',
-                tasks: ['jshint:src', 'qunit']
+                tasks: ['jshint:src', 'concat', 'uglify']
+            },
+            docs: {
+                files: '<%= jshint.docs.src %>',
+                tasks: ['jshint:docs']
             },
             test: {
                 files: '<%= jshint.test.src %>',

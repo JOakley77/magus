@@ -1,3 +1,158 @@
-.magus {
-  background: blue;
+.magus .accordion .accordion-group .accordion-heading .accordion-toggle {
+  position: relative;
+  text-decoration: none;
+}
+.magus .accordion .accordion-group .accordion-heading .accordion-toggle > span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -7px;
+}
+.magus .accordion .accordion-group.magus-active .accordion-heading a {
+  background-color: #5cb85c;
+}
+.magus .accordion .accordion-group.magus-inactive .accordion-heading a {
+  background-color: #95D195;
+}
+.magus .accordion .accordion-group.magus-alert .accordion-heading a {
+  background-color: #f0ad4e;
+}
+.magus .accordion .accordion-group.magus-disabled .accordion-heading a {
+  background-color: #eee;
+}
+.magus .magus-steps {
+  margin: 0;
+  padding: 0;
+  counter-reset: li;
+  list-style: none;
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.magus .magus-steps li {
+  padding: 4px 0;
+}
+.magus .magus-steps li a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0 0 0 38px;
+  background: #fff;
+  color: #444;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.magus .magus-steps li a i {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.magus .magus-steps li a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -13px;
+  background: #333;
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: none;
+}
+.magus .magus-steps li a:after {
+  position: absolute;
+  content: '';
+  border: 12px solid rgba(255, 255, 255, 0);
+  left: 0;
+  top: 50%;
+  margin-top: -12px;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.magus .magus-steps li.acc-inactive a:before {
+  background: #56C5FF;
+  color: #1183BE;
+}
+.magus .magus-steps li.acc-completed a {
+  color: #567910;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+.magus .magus-steps li.acc-completed a i {
+  color: #7BAD18;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.magus .magus-steps li.acc-completed a:before {
+  background: #7BAD18;
+  color: #517509;
+}
+.magus .magus-steps li.acc-completed a:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.magus .magus-steps li.acc-completed a:hover:before {
+  background: #7BAD18;
+}
+.magus .magus-steps li.acc-completed.acc-active a:before {
+  background: #358000;
+  color: #fff;
+}
+.magus .magus-steps li.acc-completed.acc-active a:after {
+  border-left-color: #358000;
+}
+.magus .magus-steps li.acc-completed.acc-active a:hover:before {
+  background: #358000;
+}
+.magus .magus-steps li.magus-inactive a:before {
+  background: #95D195;
+}
+.magus .magus-steps li.magus-active a {
+  padding-left: 40px;
+}
+.magus .magus-steps li.magus-active a:before {
+  background: #5cb85c;
+}
+.magus .magus-steps li.magus-active a:after {
+  left: 25px;
+  border-left-color: #5cb85c;
+}
+.magus .magus-steps li.magus-active a:hover:before {
+  background: #5cb85c;
+}
+.magus .magus-steps li.magus-alert a:before {
+  background: #f0ad4e;
+}
+.magus .magus-steps li.magus-alert a:after {
+  left: 25px;
+  border-left-color: #f0ad4e;
+}
+.magus .magus-steps li.magus-alert a:hover:before {
+  background: #f0ad4e;
+}
+.magus .magus-steps li.magus-disabled a:before {
+  background: #eee;
+  color: #ccc;
+}
+.magus .magus-inactive a,
+.magus .magus-active a {
+  cursor: default;
+  color: #fff;
+}
+.magus .magus-inactive a {
+  font-weight: normal;
+}
+.magus .magus-active a {
+  font-weight: bold;
+}
+.magus .magus-disabled a {
+  color: #ccc;
+  cursor: not-allowed;
 }
