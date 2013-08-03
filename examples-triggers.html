@@ -1,8 +1,8 @@
 ---
 layout: full
-title: Basic Example
-slug: examples-basic
-lead: "A basic example of loading Magus with no parameters."
+title: Triggers Example
+slug: examples-triggers
+lead: "A basic example showing off a few of the triggers you can access via data attributes."
 base_url: "../"
 ---
 
@@ -12,7 +12,7 @@ base_url: "../"
     <h2 id="basic-examples">Basic Example</h2>
     <p>Using a basic initializer, we get a step-by-step wizard to guide the user down a linear path:</p>
 
-    <div class="bs-example magus" id="magus_basic_example1" data-magus="magus">
+    <div class="bs-example magus" id="magus_basic_example">
         <div class="row">
             <div class="col-lg-9">
                 <div class="accordion">
@@ -38,8 +38,8 @@ base_url: "../"
                             <div class="accordion-inner">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="0">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="2">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -52,8 +52,8 @@ base_url: "../"
                             <div class="accordion-inner">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="1">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="3" disabled="disabled">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -66,126 +66,109 @@ base_url: "../"
                     <li><a href="#panel2">Panel #2</a></li>
                     <li><a href="#panel3">Panel #3</a></li>
                 </ol>
-            </div>
-        </div>
-    </div>
 
-    <div class="bs-example magus" id="magus_basic_example2">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="accordion">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel1">Panel #1</a>
-                        </div>
-                        <div id="panel1" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
-                                </div>
-                            </div>
-                        </div>
+                <hr />
+
+                <div class="panel">
+                    <div class="panel-heading">Triggers</div>
+
+                    <h4>Collapse / Hide</h4>
+                    <button type="button" class="btn btn-mini btn-default" data-hide="0">Panel 1</button>
+                    <button type="button" class="btn btn-mini btn-default" data-hide="current">Current</button>
+
+                    <h4>Expand / Show</h4>
+                    <button type="button" class="btn btn-mini btn-default" data-show="0">Panel 1</button>
+                    <button type="button" class="btn btn-mini btn-default" data-show="last">Last Active</button>
+
+                    <h4>Disable</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-mini btn-danger" data-disable="0">Panel 1</button>
+                        <button type="button" class="btn btn-mini btn-danger" data-disable="1">Panel 2</button>
+                        <button type="button" class="btn btn-mini btn-danger" data-disable="2">Panel 3</button>
                     </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel2">Panel #2</a>
-                        </div>
-                        <div id="panel2" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel3">Panel #3</a>
-                        </div>
-                        <div id="panel3" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
-                                </div>
-                            </div>
-                        </div>
+
+                    <h4>Jump To</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-mini btn-default" data-goto="0">Panel 1</button>
+                        <button type="button" class="btn btn-mini btn-default" data-goto="1">Panel 2</button>
+                        <button type="button" class="btn btn-mini btn-default" data-goto="2">Panel 3</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3">
-                <ol class="magus-steps">
-                    <li><a href="#panel1">Panel #1</a></li>
-                    <li><a href="#panel2">Panel #2</a></li>
-                    <li><a href="#panel3">Panel #3</a></li>
-                </ol>
+
+                <div class="panel">
+                    <div class="panel-heading">Pagination</div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                        <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading">Alerts</div>
+                    <button type="button" class="btn btn-mini btn-warning" data-alert="0">Panel 1</button>
+                </div>
             </div>
         </div>
     </div>
 
 {% highlight html %}
-<div class="bs-example magus" id="magus_basic_example" data-magus="magus">
-    <div class="row">
-        <div class="col-lg-9">
-            <div class="accordion">
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel1">Panel #1</a>
-                    </div>
-                    <div id="panel1" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                                <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+<div class="bs-example magus" id="magus_basic_example">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="accordion">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel1">Panel #1</a>
+                        </div>
+                        <div id="panel1" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel2">Panel #2</a>
-                    </div>
-                    <div id="panel2" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-mini btn-success" data-goto="0">Previous</button>
-                                <button type="button" class="btn btn-mini btn-success" data-goto="2">Next</button>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel2">Panel #2</a>
+                        </div>
+                        <div id="panel2" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="0">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="2">Next</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel3">Panel #3</a>
-                    </div>
-                    <div id="panel3" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-mini btn-success" data-goto="1">Previous</button>
-                                <button type="button" class="btn btn-mini btn-success" data-goto="3" disabled="disabled">Next</button>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel3">Panel #3</a>
+                        </div>
+                        <div id="panel3" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="1">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="3" disabled="disabled">Next</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3">
-            <ol class="magus-steps">
-                <li><a href="#panel1">Panel #1</a></li>
-                <li><a href="#panel2">Panel #2</a></li>
-                <li><a href="#panel3">Panel #3</a></li>
-            </ol>
+            <div class="col-lg-3">
+                <ol class="magus-steps">
+                    <li><a href="#panel1">Panel #1</a></li>
+                    <li><a href="#panel2">Panel #2</a></li>
+                    <li><a href="#panel3">Panel #3</a></li>
+                </ol>
+            </div>
         </div>
     </div>
-</div>
 {% endhighlight %}
 
     <h2 id="basic-usage">Usage</h2>

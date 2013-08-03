@@ -59,9 +59,9 @@
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         <li><a href="../examples">Overview</a></li>
                         <li><a href="../examples-basic">Basic</a></li>
-                        <li><a href="#">Steps on the side</a></li>
-                        <li><a href="#">Steps on the top</a></li>
-                        <li><a href="#">Form validation</a></li>
+                        <li><a href="../examples-triggers">Triggers</a></li>
+                        <li><a href="../examples-steps-on-top">Steps on top</a></li>
+                        <li><a href="../examples-forms">Form validation</a></li>
                     </ul>
                 </li>
                 <li>
@@ -85,14 +85,13 @@
 
     <div class="container bs-docs-container">
         <div class="row">
-            
             <div class="col-lg-12"><!-- Collapse
 ================================================== -->
 <div class="bs-docs-section">
     <h2 id="basic-examples">Basic Example</h2>
     <p>Using a basic initializer, we get a step-by-step wizard to guide the user down a linear path:</p>
 
-    <div class="bs-example magus" id="magus_basic_example" data-default-panel="0">
+    <div class="bs-example magus" id="magus_basic_example1" data-magus="magus">
         <div class="row">
             <div class="col-lg-9">
                 <div class="accordion">
@@ -118,8 +117,8 @@
                             <div class="accordion-inner">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="0">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="2">Next</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -132,8 +131,8 @@
                             <div class="accordion-inner">
                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="1">Previous</button>
-                                    <button type="button" class="btn btn-mini btn-success" data-goto="3" disabled="disabled">Next</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -146,80 +145,122 @@
                     <li><a href="#panel2">Panel #2</a></li>
                     <li><a href="#panel3">Panel #3</a></li>
                 </ol>
-
-                <hr />
-
-                <div class="panel">
-                    <div class="panel-heading">Triggers</div>
-
-                    <h4>Collapse / Hide</h4>
-                    <button type="button" class="btn btn-mini btn-default" data-hide="0">Panel 1</button>
-                    <button type="button" class="btn btn-mini btn-default" data-hide="current">Current</button>
-
-                    <h4>Expand / Show</h4>
-                    <button type="button" class="btn btn-mini btn-default" data-show="0">Panel 1</button>
-                    <button type="button" class="btn btn-mini btn-default" data-show="last">Last Active</button>
-
-                    <h4>Disable</h4>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-mini btn-danger" data-disable="0">Panel 1</button>
-                        <button type="button" class="btn btn-mini btn-danger" data-disable="1">Panel 2</button>
-                        <button type="button" class="btn btn-mini btn-danger" data-disable="2">Panel 3</button>
-                    </div>
-
-                    <h4>Jump To</h4>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-mini btn-default" data-goto="0">Panel 1</button>
-                        <button type="button" class="btn btn-mini btn-default" data-goto="1">Panel 2</button>
-                        <button type="button" class="btn btn-mini btn-default" data-goto="2">Panel 3</button>
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="panel-heading">Pagination</div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
-                        <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="panel-heading">Alerts</div>
-                    <button type="button" class="btn btn-mini btn-warning" data-alert="0">Panel 1</button>
-                </div>
             </div>
         </div>
-    </div><!-- /example -->
+    </div>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion&quot;</span> <span class="na">id=</span><span class="s">&quot;basic_example&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#basic_example&quot;</span> <span class="na">href=</span><span class="s">&quot;#panel1&quot;</span><span class="nt">&gt;</span>Collapsible Group Item #1<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;panel1&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse in&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.
+    <div class="bs-example magus" id="magus_basic_example2">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="accordion">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel1">Panel #1</a>
+                        </div>
+                        <div id="panel1" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel2">Panel #2</a>
+                        </div>
+                        <div id="panel2" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic_example" href="#panel3">Panel #3</a>
+                        </div>
+                        <div id="panel3" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="prev">Previous</button>
+                                    <button type="button" class="btn btn-mini btn-success" data-goto="next">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <ol class="magus-steps">
+                    <li><a href="#panel1">Panel #1</a></li>
+                    <li><a href="#panel2">Panel #2</a></li>
+                    <li><a href="#panel3">Panel #3</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-example magus&quot;</span> <span class="na">id=</span><span class="s">&quot;magus_basic_example&quot;</span> <span class="na">data-magus=</span><span class="s">&quot;magus&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-9&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#basic_example&quot;</span> <span class="na">href=</span><span class="s">&quot;#panel1&quot;</span><span class="nt">&gt;</span>Panel #1<span class="nt">&lt;/a&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;panel1&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-success&quot;</span> <span class="na">data-goto=</span><span class="s">&quot;prev&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/button&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-success&quot;</span> <span class="na">data-goto=</span><span class="s">&quot;next&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/button&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#basic_example&quot;</span> <span class="na">href=</span><span class="s">&quot;#panel2&quot;</span><span class="nt">&gt;</span>Panel #2<span class="nt">&lt;/a&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;panel2&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-success&quot;</span> <span class="na">data-goto=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/button&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-success&quot;</span> <span class="na">data-goto=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/button&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#basic_example&quot;</span> <span class="na">href=</span><span class="s">&quot;#panel3&quot;</span><span class="nt">&gt;</span>Panel #3<span class="nt">&lt;/a&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;panel3&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-success&quot;</span> <span class="na">data-goto=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/button&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-success&quot;</span> <span class="na">data-goto=</span><span class="s">&quot;3&quot;</span> <span class="na">disabled=</span><span class="s">&quot;disabled&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/button&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#basic_example&quot;</span> <span class="na">href=</span><span class="s">&quot;#panel2&quot;</span><span class="nt">&gt;</span>Collapsible Group Item #2<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;panel2&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.
-            <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#basic_example&quot;</span> <span class="na">href=</span><span class="s">&quot;#panel3&quot;</span><span class="nt">&gt;</span>Collapsible Group Item #3<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;panel3&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.
-            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-3&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;magus-steps&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#panel1&quot;</span><span class="nt">&gt;</span>Panel #1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#panel2&quot;</span><span class="nt">&gt;</span>Panel #2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#panel3&quot;</span><span class="nt">&gt;</span>Panel #3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ol&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -321,7 +362,6 @@
 </code></pre></div>
   </div>
 </div>
-            
         </div>
     </div>
 

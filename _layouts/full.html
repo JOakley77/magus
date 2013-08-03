@@ -19,24 +19,7 @@
 
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-lg-3">
-                <div class="bs-sidebar">
-                    <ul class="nav bs-sidenav">
-                        {% if page.slug == "getting-started" %}
-                            {% include nav-getting-started.html %}
-                        {% elsif page.slug == "examples" %}
-                            {% include nav-examples.html %}
-                        {% elsif page.slug == "customizing" %}
-                            {% include nav-customizing.html %}
-                        {% elsif page.slug == "options" %}
-                            {% include nav-options.html %}
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9">
-                {{ content }}
-            </div>
+            <div class="col-lg-12">{{ content }}</div>
         </div>
     </div>
 

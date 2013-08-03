@@ -52,6 +52,9 @@
         // Examples
 
         // Basic
-        $( '#magus_basic_example' ).magus();
+        $( '#magus_basic_example2' ).magus({
+            active : 2
+        });
+        //$( '#magus_basic_example' ).magus();
     });
 }( window.jQuery );
