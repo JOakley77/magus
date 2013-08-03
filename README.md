@@ -1,7 +1,2 @@
 #Magus
-A jQuery / Bootstrap wizard (or steps) plugin for guiding a user through a series of steps.
-
-##Installation
-
-### Grunt
-npm install
+A jQuery / Bootstrap wizard (or steps) plugin for guiding a user through a series of steps. I'm still actively developing this so it's still in Alpha. The docs are lacking but the plugin in at about 85% completion right now. It's not that cool anywho!
